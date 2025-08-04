@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Unit Converter</h1>
+    <button id="dark-mode-toggle">🌗 Toggle Dark Mode</button>
+    <select id="unit-type">
+      <option value="length">📏 Length</option>
+      <option value="weight">🏋️‍♂️ Weight</option>
+      <option value="time">⏰ Time</option>
+      <option value="volume">🧪 Volume</option>
+      <option value="area">🗺️ Area</option>
+      <option value="temperature">🌡️ Temperature</option>
+    </select>
+    <div class="conversion-panel">
+      <input type="number" id="input-value" placeholder="Enter value" />
+      <select id="from-unit"></select>
+      <span>→</span>
+      <select id="to-unit"></select>
+      <button id="convert-btn">Convert</button>
+    </div>
+    <div class="result">
+      <p id="conversion-result"></p>
+    </div>
+    <div class="actions">
+      <button id="add-favorite">❤️ Add to Favorites</button>
+      <button id="clear-history">🧹 Clear History</button>
+      <button id="clear-favorites">🧺 Clear Favorites</button>
+    </div>
+    <div class="history">
+      <h2>🔁 Last 10 Conversions</h2>
+      <ul id="history-list"></ul>
+    </div>
+    <div class="favorites">
+      <h2>⭐ Favorites</h2>
+      <ul id="favorites-list"></ul>
+    </div>
+    <audio id="convert-sound" src="audio/audio.wav" preload="auto"></audio>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

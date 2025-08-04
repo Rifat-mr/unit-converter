@@ -1,0 +1,136 @@
+:root {
+  --bg-color: #1cba22a7;
+  --text-color: #222;
+  --card-bg: #ffffff;
+  --button-bg: #4CAF50;
+  --button-text: white;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #f0f0f0;
+  --card-bg: #2b2b2b;
+  --button-bg: #5cdb95;
+  --button-text: #1e1e1e;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 200vh;
+  padding-top: 20px;
+}
+
+/*.container {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-in-out;
+}*/
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#dark-mode-toggle {
+  display: block;
+  margin: 0 auto 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+}
+
+select, input[type="number"], button {
+  width: 100%;
+  margin: 0.4rem 0;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3d5040d6;
+}
+
+.conversion-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.history, .favorites {
+  margin-top: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #e8f0fe;
+  padding: 0.5rem;
+  margin: 0.3rem 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark li {
+  background: #3a3a3a;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #dark-mode-toggle {
+    font-size: 0.8rem;
+  }
+}
